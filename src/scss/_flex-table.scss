@@ -1,0 +1,56 @@
+.flex-table {
+
+
+  $directions: ('top', 'right', 'bottom', 'left');
+
+  @each $side in $directions {
+    .border-#{$side}-transparent {
+      border-#{$side}-color: transparent; 
+    }
+  }
+
+  div {
+    text-align: right;
+    color: black;
+    font-size: 12px;
+    &.text-center{
+      text-align: center;
+    }
+
+    &.col {
+      max-width: 340px;
+      min-width: 140px;
+    }
+
+    &.read-only span {
+      line-height: 34px;
+    }
+
+    &.flex-table__summary-row {
+      background-color: #E9F5FA;
+    }
+
+    input {
+      height: 100%;
+      font-size: 12px;
+    }
+
+  }
+
+  .flex-table__col-title {
+    text-transform: capitalize;
+  }
+
+  .flex-table__row-title {
+    &.collapsible {
+      cursor: pointer;
+    }
+  }
+
+  @for $i from 0 through 10 {
+    .indent-#{$i} {
+      padding-left: $i * 24px;
+    }
+  }
+
+}

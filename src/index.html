@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Medical Grid</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style type="text/css">
+    @-webkit-keyframes yellow-fill {
+      0% {
+        fill: #eee; }
+      45% {
+        fill: #F1B13B; }
+      55% {
+        fill: #eee; }
+      100% {
+        fill: #eee; } }
+    @-webkit-keyframes orange-fill {
+      0% {
+        fill: #eee; }
+      45% {
+        fill: #E16734; }
+      55% {
+        fill: #eee; }
+      100% {
+        fill: #eee; } }
+    @-webkit-keyframes red-fill {
+      0% {
+        fill: #eee; }
+      45% {
+        fill: #B22A47; }
+      55% {
+        fill: #eee; }
+      100% {
+        fill: #eee; } }
+    @-webkit-keyframes purple-fill {
+      0% {
+        fill: #eee; }
+      45% {
+        fill: #5D5994; }
+      55% {
+        fill: #eee; }
+      100% {
+        fill: #eee; } }
+    @-webkit-keyframes blue-fill {
+      0% {
+        fill: #eee; }
+      45% {
+        fill: #0080B8; }
+      55% {
+        fill: #eee; }
+      100% {
+        fill: #eee; } }
+    @-webkit-keyframes green-fill {
+      0% {
+        fill: #eee; }
+      45% {
+        fill: #22A54D; }
+      55% {
+        fill: #eee; }
+      100% {
+        fill: #eee; } }
+    #yellowFeather path {
+      fill: #eee;
+      animation: yellow-fill 5s infinite;
+      -webkit-animation: yellow-fill 5s infinite;
+      animation-delay: 0.25s;
+      -webkit-animation-delay: 0.25s; }
+
+    #orangeFeather path {
+      fill: #eee;
+      animation: orange-fill 5s infinite;
+      -webkit-animation: orange-fill 5s infinite;
+      animation-delay: 0.5s;
+      -webkit-animation-delay: 0.5s; }
+
+    #redFeather path {
+      fill: #eee;
+      animation: red-fill 5s infinite;
+      -webkit-animation: red-fill 5s infinite;
+      animation-delay: 0.75s;
+      -webkit-animation-delay: 0.75s; }
+
+    #purpleFeather path {
+      fill: #eee;
+      animation: purple-fill 5s infinite;
+      -webkit-animation: purple-fill 5s infinite;
+      animation-delay: 1s;
+      -webkit-animation-delay: 1s; }
+
+    #blueFeather path {
+      fill: #eee;
+      animation: blue-fill 5s infinite;
+      -webkit-animation: blue-fill 5s infinite;
+      animation-delay: 1.25s;
+      -webkit-animation-delay: 1.25s; }
+
+    #greenFeather path {
+      fill: #eee;
+      animation: green-fill 5s infinite;
+      -webkit-animation: green-fill 5s infinite;
+      animation-delay: 1.5s;
+      -webkit-animation-delay: 1.5s; }
+
+    #peacock {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -37.5px;
+      z-index: 100;
+    }
+    #loading-bkg {
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #282E39;
+    }
+  </style>
+</head>
+<body>
+  <ag-root>
+    <div id="loading-bkg">
+      <svg version="1.1" id="peacock" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="35" width="75" viewBox="479.1 306.8 91.4 54.2" enable-background="new 479.1 306.8 91.4 54.2" xml:space="preserve">
+        <g transform="scale(.05)">
+          <g id="greenFeather" transform="translate(0.000000,1188.000000) scale(0.100000,-0.100000)">
+            <path fill="#22A54D" d="M111803-56280c-222-28-453-97-627-188c-80-42-787-528-2561-1762l-2450-1705l2835-3c2968-3,3232,0,3413,38
+              c374,78,675,245,958,529c242,244,392,527,467,881c74,344,48,733-68,1024c-154,389-471,757-823,956c-170,97-404,182-592,216
+              C112250-56275,111912-56267,111803-56280z"/>
+          </g>
+          <g id="blueFeather" transform="translate(0.000000,1188.000000) scale(0.100000,-0.100000)">
+            <path fill="#0080B8" d="M110427-52125c-538-74-998-354-1296-790c-84-122-92-139-235-462c-62-142-639-1444-1282-2893
+              c-1039-2346-1253-2835-1242-2845c3-3,4650,3187,5150,3534c412,286,519,383,671,611c163,245,261,517,298,834c17,142,6,443-20,571
+              c-46,223-139,441-276,645c-168,249-402,454-685,599c-219,112-424,179-615,201C110774-52107,110547-52109,110427-52125z"/>
+          </g>
+          <g id="purpleFeather" transform="translate(0.000000,1188.000000) scale(0.100000,-0.100000)">
+            <path fill="#5D5994" d="M107020-49622c-320-24-615-128-887-311c-424-286-704-730-777-1232c-17-115-23-245-13-261
+              c5-8,126-14,404-19c391-7,399-8,453-32c64-28,90-49,90-74c0-11-66-61-197-149c-248-166-343-240-427-332c-120-131-186-303-173-448
+              c11-120,842-5340,850-5337c5,1,532,1179,1171,2617c640,1438,1197,2685,1239,2770c116,237,193,481,233,742c23,148,23,426,1,558
+              c-46,269-170,549-348,780c-94,123-292,319-396,393C107900-49714,107444-49589,107020-49622z"/>
+          </g>
+          <g id="redFeather" transform="translate(0.000000,1188.000000) scale(0.100000,-0.100000)">
+            <path fill="#B22A47" d="M102820-49640c-424-38-799-206-1093-488c-408-394-625-948-579-1479c13-143,37-275,70-378
+              c10-33,551-1247,1201-2698c1048-2340,1427-3165,1437-3132c13,39,957,6145,965,6239c23,286-45,618-189,919c-94,196-185,320-363,492
+              c-113,109-182,165-301,242C103634-49705,103224-49604,102820-49640z"/>
+          </g>
+          <g id="orangeFeather" transform="translate(0.000000,1188.000000) scale(0.100000,-0.100000)">
+            <path fill="#E16734" d="M99256-52131c-503-65-926-313-1235-724c-170-225-278-461-330-720c-110-545,19-1075,364-1500
+              c169-208,33-110,2984-2144c1504-1037,2745-1886,2758-1889c22-4,21,0-25,104c-851,1906-2676,5956-2706,6004
+              c-258,416-676,717-1155,831C99724-52124,99440-52108,99256-52131z"/>
+          </g>
+          <g id="yellowFeather" transform="translate(270.000000,1710.000000) scale(0.100000,-0.100000) rotate(33)">
+            <path fill="#F1B13B" d="M50859.9-94313.1c-503-65-926-313-1235-724c-170-225-278-461-330-720c-110-545,19-1075,364-1500
+              c169-208,33-110,2984-2144c1504-1037,2745-1886,2758-1889c22-4,21,0-25,104c-851,1906-2676,5956-2706,6004
+              c-258,416-676,717-1155,831C51327.9-94306.1,51043.9-94290.1,50859.9-94313.1z"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </ag-root>
+</body>
+</html>

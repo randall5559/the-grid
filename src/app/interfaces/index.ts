@@ -1,0 +1,16 @@
+export { SaveSpendData } from './save-spend-data.interface';
+export { TotalRow } from './total-row.interface';
+export { Agency } from './agency.interface';
+export { Property } from './property.interface';
+export { Advertiser } from './advertiser.interface';
+export { DashboardAdvertiser } from './dashboard-advertiser.interface';
+export { DashboardAgency } from './dashboard-agency.interface';
+export { DashboardTotal } from './dashboard-total.interface';
+export { ErrorType } from './error-type.interface';
+export { OptionModel } from './option-model.interface';
+export { SelectItem } from './multi-select-item.interface';
+export { Row } from './row.interface';
+export { BaseEntity } from './base-entity.interface';
+export { Comment } from './comment.interface';
+export { Modal } from './modal.interface';
+export { User } from './user.interface';

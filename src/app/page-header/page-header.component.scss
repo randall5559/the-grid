@@ -1,0 +1,41 @@
+$menu-height: 50px;
+
+.global-header {
+  background-color: #000000;
+}
+
+#page-menu {
+
+  > ul {
+
+    margin: 0px;
+    padding: 0px;
+    height: $menu-height;
+
+    li {
+      display: inline-block;
+      height: 100%;
+      line-height: $menu-height;
+      a {
+        text-transform: uppercase;
+        line-height: $menu-height;
+        color: grey;
+        text-decoration: none;
+        &:hover, &:active, &:visited {
+          text-decoration: none;
+          color: grey;
+        }
+        &.active {
+          color: white;
+          font-weight: bold;
+        }
+      }
+      &.separator {
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        width: 2px;
+        margin-left: 2px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,16 @@
+// path overrides, uses ng2's deep flag
+:host /deep/ .c3 {
+  path, line {
+    stroke: grey;
+    fill: none;
+  }
+}
+
+:host /deep/ .c3-tooltip-container {
+  z-index: 11;
+
+  .c3-tooltip td {
+    border: 1px solid grey;
+  }
+
+}

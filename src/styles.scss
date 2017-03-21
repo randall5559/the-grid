@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+
+// import sassy pam
+$font-path: '../node_modules/sassypam/vendor/assets/fonts';
+@import '../node_modules/sassypam/vendor/assets/stylesheets/sassypam_no_rails.sass';
+
+// Thirdparty 
+$icon-font-path: '../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss'; 
+@import '../node_modules/select2/src/scss/core.scss';
+
+// Local Sheets
+@import './scss/_flex-table'; 
+
+// Global Overrides
+body, html { 
+  font-family: "Open Sans";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.main-content {
+  height: 94%;
+}
+
+.content-title-agency-gateway {
+  box-shadow: inset 0 4px 0 0px #3C3670;
+  background: white;
+  position: relative;
+  padding: .75rem;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+ag-property-row > div, ag-agency-row > div {
+    background-color: #f1f1f1;
+}
+
+
+$directions: ('top', 'right', 'bottom', 'left');
+
+@each $side in $directions {
+  .border-#{$side}-clear {
+    border-#{$side}: none;   
+  }
+}
+
+.super-header {
+  font-size: 72px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+// .truncate {
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   width: 100%;
+//   display: inline-block;
+// }

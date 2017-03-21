@@ -1,0 +1,20 @@
+<div class="modal fade" [ngClass]="{'in':shown}" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="close()"><span aria-hidden="true">&times;</span></button>
+
+        <!-- modal title data here -->
+        <span class="modal-title">
+          <span #titlesAnchor></span>
+        </span>
+
+      </div>
+
+      <!-- modal data here -->
+      <div class="modal-body">
+        <span #contentAnchor></span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div *ngIf="row && !row.collapsed && row.isFiltered" class="flex border-bottom">
+  <div class="flex-3 left-align pvs phm flex-table__row-title">
+    <span class="indent-2 em-high">{{row.advertiser_name}}</span><br>
+    <span class="indent-2">
+      <span>{{row.demo}}</span>
+    <span *ngIf="row.deal_name && row.deal_name !== ' ' && row.deal_name.length > 0">&nbsp;&bull;&nbsp;{{row.deal_name}}</span>
+    <span *ngIf="row.deal_tag && row.deal_tag !== ' ' && row.deal_tag.length > 0">&nbsp;&bull;&nbsp;{{row.deal_tag}}</span>
+    <span *ngIf="row.selling_vertical && row.selling_vertical !== ' ' && row.selling_vertical.length  > 0">&nbsp;&bull;&nbsp;{{row.selling_vertical}}</span>
+    <span *ngIf="row.sales_type && row.sales_type !== ' ' && row.sales_type.length > 0">&nbsp;&bull;&nbsp;{{row.sales_type.length}}</span>
+    </span>
+  </div>
+  <div class="flex-1 border-left pvs phm flex-table__row-title text-center col read-only">
+    <span>
+      <i class="sms-glyph-icon_comment icon-grey comment-bubble" (click)="openComments(row.advertiser_name, row.comments, row.id, row.deal_id)"></i>
+      {{row.comments.length}}
+    </span>
+  </div>
+  <div class="flex-1 border-left pvs phm flex-table__row-title col read-only">
+    <span>{{row.guaranteed_cpm | currency:'USD':true:'1.2-2'}}</span>
+  </div>
+  <div class="flex-1 border-left pvs phm flex-table__row-title col editable-bg" [ngClass]="{ 'em-max' : row.isDirty }">
+    <ag-input [model]="updates$" attr="{{columns[columns.agency_spend]}}" [item]="row"></ag-input>
+  </div>
+  <div class="flex-1 border-left pvs phm flex-table__row-title col read-only">
+    <span>{{row.spend | currency:'USD':true:'1.0-0'}}</span>
+  </div>
+  <div class="flex-1 border-left pvs phm flex-table__row-title col read-only">
+    <span [ngClass]="{ 'red' : row.variance < 0 }">{{row.variance | currency:'USD':true:'1.0-0' | addParenthesisToNegative}}</span>
+  </div>
+</div>

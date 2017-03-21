@@ -1,0 +1,12 @@
+<div *ngIf="row && !row.collapsed && row.isFiltered" class="flex">
+  <div (click)="collapse(row.id)" class="flex-3 left-align pvs phm flex-table__row-title collapsible">
+    <span class="indent-0">
+      <i *ngIf="!row.showChildren" class="sms-glyph-arrow_triangle-right"></i>
+      <i *ngIf="row.showChildren" class="sms-glyph-arrow_triangle-down"></i>
+      {{row.agency_name}}
+    </span>
+  </div>
+  <div class="flex-1 pvs phm flex-table__row-title col">
+    <span>{{row.spend| currency:'USD':true:'1.0-0'}}</span>
+  </div>
+</div>

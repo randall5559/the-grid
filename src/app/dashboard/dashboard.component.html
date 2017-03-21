@@ -1,0 +1,87 @@
+<div class="content-title-agency-gateway">
+  <h2 class="pam">Medical Grid</h2>
+</div>
+
+<!-- filter bar -->
+<div class="flex filter-module pvm border-bottom">
+  <div class="flex-1 pll prm">
+    <ag-multi-select
+      name="agency_filter_multiselect"
+      placeholder="Select Agency(s)"
+      [optionsList]="agencyFilter"
+      multiple="multiple"
+      (onSelect)="applyAgencyFilter($event)">
+    </ag-multi-select>
+  </div>
+  <div class="flex-3">&nbsp;</div>
+</div>
+
+<div class="flex">
+
+
+  <!-- left side -->
+  <div class="flex-9">
+
+    <!-- Highlight Stables -->
+    <div class="flex-between width-90 plm">
+
+      <ag-highlight class="flex-8 mll" align="left" [link]="false">
+        <h1 class="width-100" main-text>{{registration_dollars}}</h1>
+        <span sub-text>Insured Dollars</span>
+      </ag-highlight>
+
+      <span class="flex-1 border-left" style="max-width: 1px;"></span>
+
+      <ag-highlight class="flex-10" [link]="false">
+        <h1 main-text>{{spend_dollars}}</h1>
+        <span sub-text>Medical Spend</span>
+      </ag-highlight>
+
+      <span class="flex-1 border-left" style="max-width: 1px;"></span>
+
+      <ag-highlight class="flex-8" align="right" [link]="false">
+        <h1 main-text>{{variance_dollars}}</h1>
+        <span sub-text>Total Dollars</span>
+      </ag-highlight>
+
+    </div>
+
+    <!-- Donut Charts -->
+    <div *ngIf="vertical" class="mtl flex-between">
+      <ag-donut-chart class="flex-1" color="#d34141" [part]="vertical.broadcast" [whole]="vertical.total" label="Heart"></ag-donut-chart>
+      <ag-donut-chart class="flex-1" color="#f2cd48" [part]="vertical.hispanic" [whole]="vertical.total" label="Cancer"></ag-donut-chart>
+      <ag-donut-chart class="flex-1" color="#7faf32" [part]="vertical.cable" [whole]="vertical.total" label="Diabetes"></ag-donut-chart>
+      <ag-donut-chart class="flex-1" color="#f2ab3a" [part]="vertical.news" [whole]="vertical.total" label="Lungs"></ag-donut-chart>
+      <ag-donut-chart class="flex-1" color="#3ebdc4" [part]="vertical.sports" [whole]="vertical.total" label="Feet"></ag-donut-chart>
+    </div>
+
+    <!-- Vertical Bar Chart -->
+    <div class="mtvl mll border-top width-95">
+      <h5 class="em-high">Property Earns</h5>
+    </div>
+    <div *ngIf="properties" class="width-95 mll">
+      <ag-bar-chart [values]="properties" [displayCount]="20"></ag-bar-chart>
+    </div>
+
+    <!-- Horizontal Bar Chart -->
+    <div class="mtvl mll border-top width-95">
+      <h5 class="em-high">Spend by Medical Organizations</h5>
+    </div>
+    <div *ngIf="agencies" class="width-95 mll mbvl">
+      <ag-horiz-bar-chart [values]="agencies"></ag-horiz-bar-chart>
+    </div>
+
+  </div>
+
+
+  <!-- right side -->
+  <div class="flex-5">
+
+    <!-- grid -->
+    <div class="width-100 phm">
+      <ag-grid [observable]="dashboardModel"></ag-grid>
+    </div>
+
+  </div>
+
+</div>

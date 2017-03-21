@@ -1,0 +1,71 @@
+{
+  "agency_deal": {
+    "spend_dollars": null,
+    "comments": [
+      {
+        "created_at": "2017-02-08T12:41:32.710Z",
+        "text": "It's clobberin time",
+        "user": {
+          "app_user_id": 0,
+          "first_name": "Incredible",
+          "last_name": "Hulk"
+        }
+      },
+      {
+        "created_at": "2017-02-08T12:41:32.710Z",
+        "text": "My spidey senses tingling",
+        "user": {
+          "app_user_id": 1,
+          "first_name": "Spider",
+          "last_name": "Man"
+        }
+      },
+      {
+        "created_at": "2017-02-08T12:41:32.710Z",
+        "text": "To me Mjolnir",
+        "user": {
+          "app_user_id": 2,
+          "first_name": "Thor",
+          "last_name": "Odin"
+        }
+      },
+      {
+        "created_at": "2017-02-08T12:41:32.710Z",
+        "text": "I am Iron Man",
+        "user": {
+          "app_user_id": 3,
+          "first_name": "Iron",
+          "last_name": "Man"
+        }
+      },
+      {
+        "created_at": "2017-02-08T12:41:32.710Z",
+        "text": "Wait, what did you just say?",
+        "user": {
+          "app_user_id": 4,
+          "first_name": "Black",
+          "last_name": "Widow"
+        }
+      },
+      {
+        "created_at": "2017-02-08T12:41:32.710Z",
+        "text": "I'm assembling a team",
+        "user": {
+          "app_user_id": 5,
+          "first_name": "Nick",
+          "last_name": "Fury"
+        }
+      },
+      {
+        "created_at": "2017-02-08T12:41:32.710Z",
+        "text": "Avenger assemble",
+        "user": {
+          "app_user_id": 6,
+          "first_name": "Captian",
+          "last_name": "America"
+        }
+      }
+    ]
+  }
+}
+

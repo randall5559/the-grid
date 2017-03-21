@@ -1,0 +1,49 @@
+<div class="content-title-agency-gateway flex">
+  <div class="flex-1">
+    <h2 class="pam">Grid Medical View</h2>
+  </div>
+</div>
+
+<div class="flex filter-module pvm border-bottom">
+  <div class="flex-1 plm prl pts">
+    <ag-multi-select name="agency_filter_multiselect" placeholder="Select Agency(s)" [optionsList]="agencyFilter" multiple="multiple"
+    (onSelect)="applyAgencyFilter($event)">
+    </ag-multi-select>
+  </div>
+  <div class="flex-1 prl pts">
+    <ag-multi-select name="property_filter_multiselect" placeholder="Select Property(s)" [optionsList]="propertyFilter" multiple="multiple"
+    (onSelect)="applyPropertyFilter($event)">
+    </ag-multi-select>
+  </div>
+  <div class="flex-1 prl pts">
+    <ag-multi-select name="advertiser_filter_multiselect" placeholder="Select Advertiser(s)" [optionsList]="advertiserFilter"
+    multiple="multiple" (onSelect)="applyAdvertiserFilter($event)">
+    </ag-multi-select>
+  </div>
+  <div class="flex-1 prm pts">
+    <ag-multi-select name="demo_filter_multiselect" placeholder="Select Demo(s)" [optionsList]="demoFilter" multiple="multiple"
+    (onSelect)="applyDemoFilter($event)">
+    </ag-multi-select>
+  </div>
+</div>
+
+<div class="flex filter-module pvm border-bottom">
+  <div class="flex-1 plm prm variance-ranges pts">
+    <div class="input-group">
+      <span class="input-group-addon" id="sizing-addon2">&#36;</span>
+      <input #varianceFilterField (keyup)="varianceFilterValue$.next($event.target.value)" class="form-control" type="text" placeholder="Spend Variance Filter"/>
+      <span class="input-group-btn">
+        <button (click)="varianceFilterValue$.next(null); varianceFilterField.value = ''" class="btn btn-default" type="button">CLEAR</button>
+      </span>
+    </div>
+  </div>
+  <div class="flex-1 plm prm pts"></div>
+  <div class="flex-1 plm prm pts"></div>
+  <div class="flex-1 plm prm pts"></div>
+</div>
+
+<ag-modal></ag-modal>
+
+<div class="ptvl" style="min-width: 900px;">
+  <ag-grid [observable]="agencyData"></ag-grid>
+</div>

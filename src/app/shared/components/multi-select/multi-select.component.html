@@ -1,0 +1,3 @@
+<select #selectEl multiple="{{multiple}}" name="{{name}}" >
+  <option *ngFor="let opt of optionsList" selected="{{opt.selected ? opt.selected : null}}" value="{{opt.id}}" >{{opt.name}}</option>
+</select>

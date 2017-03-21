@@ -1,0 +1,33 @@
+.variance-ranges {
+
+  .input-group {
+    height: 34px;
+    > span {
+      height: inherit;
+      > * {
+        height: inherit;
+      }
+    }
+  }
+
+  /** apply similar styles to that of the select2 input fields */
+  input {
+    box-sizing: border-box;
+    display: block;
+    line-height: 1.42857143;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    // height: 32px;
+    padding: 0 12px;
+  }
+
+}
+
+.dirty {
+  color: brown;
+}

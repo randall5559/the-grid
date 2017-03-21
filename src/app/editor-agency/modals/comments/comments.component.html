@@ -1,0 +1,31 @@
+<div class="comments-wrap" [ngClass]="{ 'hide' : comments.length === 0 }">
+  <div class="comment cf" *ngFor="let comment of comments; let i = index;">
+    <div class="comment-log col-xs-3 pvm right-align">
+      <p class="comment-date pvn mvn type-xs">{{ comment.created_at | date:'medium' }}</p>
+      <p class="comment-author pvn mvn type-xs em-default">
+        {{ comment.user.first_name }} {{ comment.user.last_name }}
+      </p>
+    </div>
+    <div class="col-xs-8 pvm mln">
+      <div class="comment-content phl pvm mln">
+          <div class="pull-right">
+            <i class="sms-glyph-icon_trash comment-icon-delete" (click)="onDelete(i, comment._id.$oid)"></i>
+          </div>
+          <span *ngIf="!editToggle">{{ comment.text }}</span>
+          <span *ngIf="editToggle" class="comment-edit" ><input #editElement type="text" value="{{ comment.text }}" /></span>
+      </div>
+    </div>
+  </div>
+</div>
+<hr/>
+<form>
+  <div class="form-group">
+    <label for="comment-text" class="control-label">New Comment:</label>
+    <span class="comment-status h6 green" [ngClass]="{ 'red' : textLimit < (charLimit-2400) }">({{ textLimit }})</span>
+    <textarea #addElement class="form-control" id="comment-text" placeholder="Type comment here"></textarea>
+  </div>
+  <div class="form-group right-align">
+    <span *ngIf="isAdded" class="comment-status h6 green">Comment Added!</span>
+    <button type="button" class="btn btn-primary" (click)="onAdd()" [disabled]="disableAddButton">ADD</button>
+  </div>
+</form>

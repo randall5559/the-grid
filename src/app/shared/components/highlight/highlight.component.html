@@ -1,0 +1,18 @@
+<div class="hightlight-wrapper" [ngClass]="align" >
+  <div class="highlight">
+
+    <div class="big-text" [ngClass]="{'status': status}">
+      <ng-content select="[main-text]"></ng-content>
+    </div>
+
+    <a *ngIf="link" class="sub-text" href="#">
+      <ng-content select="[link-text]"></ng-content>
+      <i class="sms-glyph-arrow_carrot-right"></i>
+    </a>
+
+    <span *ngIf="!link" class="sub-text">
+      <ng-content select="[sub-text]"></ng-content>
+    </span>
+
+  </div>
+</div>

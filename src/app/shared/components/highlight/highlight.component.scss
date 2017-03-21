@@ -1,0 +1,37 @@
+.hightlight-wrapper {
+
+  overflow: hidden;
+
+  &.left {
+    text-align: left;
+  }
+  &.center {
+    text-align: center;
+  }
+  &.right {
+    text-align: right;
+  }
+
+  .highlight {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    height: 112px;
+    width: 50%;
+    min-width: 140px;
+
+    .big-text {
+      &.status {
+        margin-top: 18px;
+      }
+    }
+
+    .sub-text {
+      position: absolute;
+      top: 70px;
+      width: 200%;
+    }
+
+  }
+
+}

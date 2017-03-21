@@ -1,0 +1,15 @@
+<div *ngIf="row && !row.collapsed" class="flex border-bottom flex-table__summary-row">
+  <div class="flex-3 left-align pvs phm flex-table__row-title em-high">Total</div>
+  <div class="flex-1 border-left border-left-transparent pvs phm flex-table__row-title col">&nbsp;</div>
+  <div class="flex-1 border-left border-left-transparent pvs phm flex-table__row-title col">&nbsp;</div>
+  <div class="flex-1 border-left pvs phm flex-table__row-title col">
+    {{row.agency_spend | currency:'USD':true:'1.0-0'}}
+    <!--<ag-input [model]="updates$" attr="{{columns[columns.agency_spend]}}" [item]="row"></ag-input>-->
+  </div>
+  <div class="flex-1 border-left pvs phm flex-table__row-title col">
+    {{row.spend | currency:'USD':true:'1.0-0'}}
+  </div>
+  <div class="flex-1 border-left pvs phm flex-table__row-title col">
+    <span [ngClass]="{ 'red' : row.variance < 0 }">{{row.variance | currency:'USD':true:'1.0-0'  | addParenthesisToNegative }}</span>
+  </div>
+</div>
